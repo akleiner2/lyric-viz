@@ -1,0 +1,56 @@
+<!doctype html> 
+<html> 
+	<head> 
+		<title> Vybe | Lyrical Search Engine </title> 
+		<link rel = "stylesheet" type = "text/css" href = "bower_components/pure/pure-min.css"/> 
+		<link rel = 
+		<link rel = "stylesheet" type = "text/css" href = "style.css"/> 
+	</head>
+	<body> 
+		<section id = "container" class = "pure-g"> 
+			<h2 class = "header"> Vybe - Lyrical Search </h2> 
+			<p id = 'description'> Vybe is a context-based lyrical search engine and recommendation system. Enter the title or 
+			<form class = "pure-form"> 
+				<input type = 'text' placeholder = 'Enter title, artist, or keywords' id = "query"/> 
+				<label for="pos" class="pure-checkbox">
+			        <input id="pos" type="checkbox" value="">
+			        Postive Sentiment
+			    </label>
+
+			    <label for="neg" class="pure-radio">
+			        <input id="neg" type="checkbox" name="optionsRadios">
+			        Negative Sentiment
+			    </label>
+
+			    <label for="neutral" class="pure-radio">
+			        <input id="neutral" type="radio" name="optionsRadios" >
+			        Neutral Sentiment
+			    </label>
+
+			    <button type = "button" id = "search"> Search </button>  
+			</form> 
+		</section> 
+
+		<section class = "lyrics-display pure-g"> 
+			<article class = "lyrics-container pure-u-2-3"> 
+				<h4 class = 'title'> </h4> 
+				<h5 class = 'artist'> </h5> 
+				<p class = "lyrics"> </p> 
+			</article> 
+
+			<article class = "recommended pure-u-1-3">  
+				<h2 class = "subtitle"> Recommendations </h2>
+				<ul class = 'recs'> 
+
+				</ul>  
+			</article> 
+		</section>
+
+		<footer> 
+			<p> Built in Champaign by AK and Earcandy </p> 
+		</footer> 
+
+		<script src = "bower_components/jquery/dist/jquery.min.js"> </script> 
+		<script src = "public/scripts/script.js"> </script> 
+	</body>
+</html>
