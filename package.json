@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/akleiner2/lyric-viz",
   "devDependencies": {
+    "body-parser": "^1.12.4",
     "bower": "^1.4.1",
     "express": "^4.12.3",
     "lodash": "^3.8.0",

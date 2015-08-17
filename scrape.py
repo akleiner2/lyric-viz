@@ -9,14 +9,14 @@ import pyprind
 
 url = "http://www.songlyrics.com"
 
-lyrics = urllib2.urlopen("http://www.songlyrics.com/g/")
+lyrics = urllib2.urlopen("http://www.songlyrics.com/z/")
 soup = BeautifulSoup(lyrics)
 
 # get all of the lyrics
 pages = soup.find("ul", {'class':'pagination'}).findAll("li", attrs = {'class':'li_pagination'})
 # get rid of the first and last index, which both point to the first pages
 pages = pages[1:-1]
-
+#print len(pages)
 def scrape(start, fin, thread_ind):
 	links = []
 	for i in range(start,fin):
@@ -71,7 +71,7 @@ def scrape(start, fin, thread_ind):
 '''
 # define the number of threads and the number of pages each thread is going to access
 threads = []
-num_threads = 4
+num_threads = 3
 num_pages = len(pages)/num_threads
 
 for i in range(num_threads):
@@ -82,4 +82,6 @@ for i in range(num_threads):
 	thread.start()
 
 for thread in threads: 
-	thread.join()
+	thread.join() 
+
+os.system('say "Scraping is done"')
